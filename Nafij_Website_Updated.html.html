@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع النفج</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .gallery, .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 2rem;
+        }
+
+        .gallery img, .videos video {
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover, .videos video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>موقع النفج</h1>
+        <p>صور ومقاطع شخصية متحركة</p>
+    </header>
+
+    <section class="gallery">
+        <h2>الصور الشخصية</h2>
+        <img src="D41F68B8-A497-417A-9387-3C8939C2D17D.jpeg" alt="صورة 1">
+        <img src="30F7214A-63BD-4B26-8E90-99BFD0452656.jpeg" alt="صورة 2">
+        <img src="AABE8A81-4427-407F-8955-56ABBDA4E2D9.jpeg" alt="صورة 3">
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2024 - موقع النفج</p>
+    </footer>
+
+    <script>
+        // Simple hover effect for videos
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('mouseenter', () => video.play());
+            video.addEventListener('mouseleave', () => video.pause());
+        });
+    </script>
+</body>
+</html>
